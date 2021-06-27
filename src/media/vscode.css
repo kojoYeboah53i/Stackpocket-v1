@@ -9,7 +9,7 @@
   .name{
     font-weight: bold;
     color: var(--vscode-textLink-activeForeground);
-    font-size:20;
+    font-size:20px;
     font-family: var(--vscode-editor-font-family);
     text-align: center;
   }
@@ -21,7 +21,18 @@
     font-family: var(--vscode-font-family);
     background-color: var(--vscode-editor-background);
   }
-  
+  .avat{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color:rgb(241, 47, 112);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+  }
   ol,
   ul {
     padding-left: var(--container-paddding);

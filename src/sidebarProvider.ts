@@ -84,7 +84,25 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
    
         let username:any = await vscode.commands.executeCommand('stackpocket.pocket.getName');
+        let avatar = '';
+		
+		if(username !== ''){
+
+			let parts = username.split(' ');
+			let init1 = parts[0][0];
+			let init2 = parts[1][0];
+
+		avatar = `
+	    	<div class="avat">
+	      	${init1}${init2} 
+	        </div>
+		   `;
+	
+		}
+
+	
         
+		
 
 
 		const styleResetUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, '/src/media', 'reset.css'));
@@ -116,9 +134,13 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
                 <h2><span>Stack<span style='font-weight:bold;'>Pocket</span></span></h2>
                 <p>reinventing resuable codes and code sharing</p>
                 </center>
+                <center>
+				
+			   ${username !== ''?avatar:''}
 
+				</center>
 			   <div class='name'>
-			   ${username !== ''?username:'If you dont have an account with stackPocket visit www.stackpocket.com to register or click on the initate button to login'}
+			   ${username !== ''?username:'<div style="font-size:12px;">If you dont have an account with stackPocket visit www.stackpocket.com to register or click on the initate button to login</div>'}
 			   </div>
 
                 <button style="" id='fetch'>Initiate</button>
