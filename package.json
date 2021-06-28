@@ -15,7 +15,8 @@
 		"onCommand:stackpocket.pocket.fetch",
 		"onCommand:stackpocket.pocket.getName",
 		"onCommand:stackpocket.pocket.savecode",
-		"onCommand:stackpocket.pocket.logout"
+		"onCommand:stackpocket.pocket.logout",
+		"onCommand:stackpocket.pocket.sendto"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -54,7 +55,11 @@
 			},
 			{
 				"command": "stackpocket.pocket.savecode",
-				"title": "Save to stackPocket"
+				"title": "Save to stackPocket 💾"
+			},
+			{
+				"command": "stackpocket.pocket.sendto",
+				"title": "Send code to 📤"
 			},
 			{
 				"command": "stackpocket.pocket.logout",
@@ -64,9 +69,13 @@
 		"menus": {
 			"editor/context": [
 				{
-				"command": "stackpocket.pocket.savecode",
-				"group": "save@1"	
-		      }
+					"command": "stackpocket.pocket.savecode",
+					"group": "save@1"	
+		        },
+				{
+					"command": "stackpocket.pocket.sendto",
+					"group": "save@2"	
+				}
 		]
 		}
 	},

@@ -169,13 +169,33 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 
+
+  let Sendto = vscode.commands.registerCommand("stackpocket.pocket.sendto",async () => {
+
+    if(vscode.window.activeTextEditor === undefined || 
+      vscode.window.activeTextEditor.document === undefined){
+        return;
+      }
+      let Text = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
+  
+      
+      fetchConnections(email,password,Text);
+
+
+
+    });
+
+
+
+
+
   let logOut = vscode.commands.registerCommand("stackpocket.pocket.logout",async () => {
 
-	context.globalState.update('email','');
+	  context.globalState.update('email','');
     context.globalState.update('password','');
     context.globalState.update('username','');
 
-	vscode.commands.executeCommand("workbench.action.reloadWindow");
+	  vscode.commands.executeCommand("workbench.action.reloadWindow");
 
   });
 
@@ -184,6 +204,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(Getname);
   context.subscriptions.push(saveCodes);
   context.subscriptions.push(logOut);
+  context.subscriptions.push(Sendto);
 
 
 }
@@ -193,6 +214,131 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 
+
+
+
+
+
+const fetchConnections  = (email:string,password:string,Text:string)=>{
+
+  axios
+  .post(config.URL + "/stackpocket/route.php?route=fetchConnections", {
+    email: email,
+    password: password,
+  })
+  .then( async function (response: any) {
+
+    if (response.data === "" || undefined) {
+
+      vscode.window.showErrorMessage("You currently have no connections yet");
+      
+    } else {
+
+      let value : any = await vscode.window.showQuickPick(response.data);
+
+        console.log(response.data);
+
+
+
+      if (value) {
+
+          console.log(typeof parseInt(value.description));
+
+           const id  = parseInt(value.description);
+
+           const label = await vscode.window.showInputBox({
+            prompt: "Label:",
+            placeHolder: "Enter code label",
+          });
+
+          if (label) {
+            
+            const extension = await vscode.window.showInputBox({
+              prompt: "Label:",
+              placeHolder: "Enter file extension ex.(js,txt,md,py,java,html,json ,etc....)",
+            });
+
+            if (extension) {
+
+              SendCodeToUser(label,id,extension,Text);
+            
+            }
+          }
+
+         
+
+      }
+        
+    }
+  })
+  .catch(function (error: string) {
+    // handle error
+    console.log(error);
+    vscode.window.showWarningMessage(
+      "Oops unable to send server error"
+    );
+  })
+  .then(function () {
+    // always executed
+  });
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const SendCodeToUser = (label:string,id:number,extension:string,codes:string) =>{
+
+
+  axios
+  .post(config.URL + "/stackpocket/route.php?route=SendCodetoUser", {
+    label:label,
+    extension:extension,
+    id:id,
+    codes:codes
+  })
+  .then(function (response: any) {
+
+    console.log(response.data);
+  
+
+     if (response.data === 'done') {
+
+      vscode.window.showInformationMessage("Code sent succefully ");
+
+     }else{
+
+      vscode.window.showWarningMessage("Oops could not send code to stackpocket check your connection");
+
+     }
+    
+        
+    
+  })
+  .catch(function (error: string) {
+    // handle error
+    console.log(error);
+    vscode.window.showWarningMessage(
+      "Oops unable to send code to user server error"
+    );
+  })
+  .then(function () {
+    // always executed
+  });
+
+
+};
 
 
 
@@ -242,11 +388,6 @@ const Login = (email: string,password: string,context: vscode.ExtensionContext) 
       // always executed
     });
 };
-
-
-
-
-
 
 
 
