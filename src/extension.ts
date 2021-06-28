@@ -11,9 +11,6 @@ import axios from "axios";
 // const text = editor.document.getText(editor.selection);
 
 
-
-
-
 interface CommandLine<T> {
   label: T;
   detail: T;
