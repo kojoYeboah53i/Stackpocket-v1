@@ -1,13 +1,11 @@
 {
 	"name": "stackpocket",
 	"displayName": "stackpocket",
-	"repository": {
-		"url": "https://github.com/aframson/Stackpocket-v1"
-	},
+	"repository": {"url": "https://github.com/aframson/Stackpocket-v1"},
 	"description": "",
 	"publisher": "aframson",
-	"version": "0.1.0",
-	"icon": "https://stackpocket.proslin.com/assets/icon.png",
+	"version": "0.0.1",
+	"icon": "https://github.com/aframson/Officail-stackpocket-web/blob/main/assets/icon.png",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
@@ -75,13 +73,13 @@
 			"editor/context": [
 				{
 					"command": "stackpocket.pocket.savecode",
-					"group": "save@1"
-				},
+					"group": "save@1"	
+		        },
 				{
 					"command": "stackpocket.pocket.sendto",
-					"group": "save@2"
+					"group": "save@2"	
 				}
-			]
+		]
 		}
 	},
 	"scripts": {
