@@ -7,7 +7,7 @@
 	"description": "",
 	"publisher": "aframson",
 	"version": "0.1.0",
-	"icon": "https://github.com/aframson/Officail-stackpocket-web/blob/main/assets/icon.png",
+	"icon": "./src/assets/icon.png",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
