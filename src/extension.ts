@@ -222,7 +222,7 @@ export function activate(context: vscode.ExtensionContext) {
 const fetchConnections  = (email:string,password:string,Text:string)=>{
 
   axios
-  .post(config.URL + "/stackpocket/route.php?route=fetchConnections", {
+  .post(config.URL + "/route.php?route=fetchConnections", {
     email: email,
     password: password,
   })
@@ -306,7 +306,7 @@ const SendCodeToUser = (label:string,id:number,extension:string,codes:string) =>
 
 
   axios
-  .post(config.URL + "/stackpocket/route.php?route=SendCodetoUser", {
+  .post(config.URL + "/route.php?route=SendCodetoUser", {
     label:label,
     extension:extension,
     id:id,
@@ -348,7 +348,7 @@ const SendCodeToUser = (label:string,id:number,extension:string,codes:string) =>
 
 const Login = (email: string,password: string,context: vscode.ExtensionContext) => {
   axios
-    .post(config.URL + "/stackpocket/route.php?route=fetchuserDeta", {
+    .post(config.URL + "/route.php?route=fetchuserDeta", {
       email: email,
       password: password,
     })
@@ -369,6 +369,9 @@ const Login = (email: string,password: string,context: vscode.ExtensionContext) 
         context.globalState.update("password", password);
         context.globalState.update("username", response.data);
 
+
+
+
         vscode.window
           .showInformationMessage(
             "Login Succesfull click continue to proceed ..",
@@ -385,7 +388,7 @@ const Login = (email: string,password: string,context: vscode.ExtensionContext) 
       // handle error
       console.log(error);
       vscode.window.showWarningMessage(
-        "Oops unable to Login user server error"
+        "Oops unable to Login incorrect email or password"
       );
     })
     .then(function () {
@@ -398,7 +401,7 @@ const Login = (email: string,password: string,context: vscode.ExtensionContext) 
 
 const fetchUser = async (email: string, password: string) => {
   axios
-    .post(config.URL + "/stackpocket/route.php?route=GetuserDeta", {
+    .post(config.URL + "/route.php?route=GetuserDeta", {
       email: email,
       password: password,
     })
@@ -449,7 +452,7 @@ const fetchUser = async (email: string, password: string) => {
 const saveCode = (text:string,email:string,password:string,description:string,extension:string)=>{
 
 
-	axios.post(config.URL + "/stackpocket/route.php?route=SaveCode", {
+	axios.post(config.URL + "/route.php?route=SaveCode", {
       email: email,
       password: password,
 	  code:text,
