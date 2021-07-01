@@ -242,7 +242,10 @@ const fetchConnections  = (email:string,password:string,Text:string)=>{
 
         console.log(response.data);
 
-       
+       // function to add two numbers
+
+      
+
 
       if (value) {
 
