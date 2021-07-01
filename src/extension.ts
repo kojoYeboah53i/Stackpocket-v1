@@ -234,6 +234,10 @@ const fetchConnections  = (email:string,password:string,Text:string)=>{
       
     } else {
 
+
+     
+
+
       let value : any = await vscode.window.showQuickPick(response.data);
 
         console.log(response.data);
@@ -242,7 +246,7 @@ const fetchConnections  = (email:string,password:string,Text:string)=>{
 
       if (value) {
 
-          console.log(typeof parseInt(value.description));
+          console.log(parseInt(value.description));
 
            const id  = parseInt(value.description);
 
@@ -275,7 +279,7 @@ const fetchConnections  = (email:string,password:string,Text:string)=>{
     // handle error
     console.log(error);
     vscode.window.showWarningMessage(
-      "Oops unable to send server error"
+      "Oops unable to send check your connection and try again"
     );
   })
   .then(function () {
@@ -330,7 +334,7 @@ const SendCodeToUser = (label:string,id:number,extension:string,codes:string) =>
     // handle error
     console.log(error);
     vscode.window.showWarningMessage(
-      "Oops unable to send code to user server error"
+      "Oops unable to send code to user check your internet connection and try agin"
     );
   })
   .then(function () {
@@ -367,8 +371,8 @@ const Login = (email: string,password: string,context: vscode.ExtensionContext) 
 
         vscode.window
           .showInformationMessage(
-            "Login Succesfull Please Restart Vscode to apply effect",
-            "Restart"
+            "Login Succesfull click continue to proceed ..",
+            "Continue"
           )
           .then((selection) => {
             if (selection) {
@@ -432,7 +436,7 @@ const fetchUser = async (email: string, password: string) => {
     .catch(function (error) {
       console.log(error);
       vscode.window.showWarningMessage(
-        "Oops unable to fetch pockets server error"
+        "Oops unable to fetch pockets server error check your connection and try again"
       );
     });
 };

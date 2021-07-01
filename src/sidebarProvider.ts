@@ -140,11 +140,11 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
 				</center>
 			   <div class='name'>
-			   ${username !== ''?username:'<div style="font-size:12px;">If you dont have an account with stackPocket visit www.stackpocket.com to register or click on the initate button to login</div>'}
+			   ${username !== ''?username:'<div style="font-size:12px;">If you dont have an account with stackPocket visit www.stackpocket.com to register or click on the "sync your stacks" button to login</div>'}
 			   </div>
 
-                <button style="" id='fetch'>Initiate</button>
-
+                
+				${username !== ''?'<button style="" id="fetch">Initiate</button>':' <button style="" id="fetch">Sync Your Stacks</button>'}
 			
 
 
