@@ -4,7 +4,7 @@
 	"repository": {
 		"url": "https://github.com/aframson/Stackpocket-v1"
 	},
-	"description": "",
+	"description": "Stackpocket is a code storage tool for quick referencing of usful codes that we usually use building our projects ",
 	"publisher": "aframson",
 	"version": "0.6.0",
 	"icon": "icon.png",
