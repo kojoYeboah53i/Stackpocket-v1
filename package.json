@@ -6,7 +6,7 @@
 	},
 	"description": "Stackpocket is a code storage tool for quick referencing of usful codes that we usually use building our projects ",
 	"publisher": "aframson",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.57.0"
