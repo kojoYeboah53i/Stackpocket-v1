@@ -30,7 +30,7 @@
 				{
 					"id": "stackpocket-sidebar-view",
 					"title": "stackpocket",
-					"icon": "../src/assets/1.png"
+					"icon": "./src/assets/1.png"
 				}
 			]
 		},
@@ -40,7 +40,7 @@
 					"type": "webview",
 					"id": "stackpocket-sidebar",
 					"name": "Stackpocket",
-					"icon": "../src/assets/1.png",
+					"icon": "./src/assets/1.png",
 					"contextualTitle": "Stackpocket"
 				}
 			]
