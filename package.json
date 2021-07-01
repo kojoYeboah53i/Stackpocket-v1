@@ -1,8 +1,11 @@
 {
 	"name": "stackpocket",
 	"displayName": "stackpocket",
+	"repository": {"url": "https://github.com/aframson/Stackpocket-v1"},
 	"description": "",
+	"publisher": "aframson",
 	"version": "0.0.1",
+	"icon": "https://stackpocket.proslin.com/assets/icon.png",
 	"engines": {
 		"vscode": "^1.57.0"
 	},

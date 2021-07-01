@@ -1,17 +1,22 @@
 
-# stackpocket README
+# StackPocket
 
-This is the README for your extension "stackpocket". After writing up a brief description, we recommend including the following sections.
+  StackPocket is a code storage system designed to store codes that we mostly use in development
+
+
+## Requirements
+
+ - you will need to login or register at 
+ * [login or signup](https://stackpocket.proslin.com)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
+- Saving codes to your pockets 
+- Sending codes to your team mates on stackpocket
+- fetching stacks from your stack cloud to your vscode
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 ## Requirements
 
@@ -55,9 +60,6 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 
 * [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
 
 * Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
 * Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
@@ -65,8 +67,9 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 
 ### For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+email to :
+* aframson77@gmail.com
+
 
 **Enjoy!**
 =======
