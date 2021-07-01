@@ -7,7 +7,7 @@
 	"description": "",
 	"publisher": "aframson",
 	"version": "0.1.0",
-	"icon": "./src/assets/icon.png",
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
