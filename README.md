@@ -14,13 +14,13 @@
 - Sending codes to your team mates on stackpocket
 - fetching stacks from your stack cloud to your vscode
 
-\!\[feature X\]\(https://stackpocket.proslin.com/assets/c1.png)
+![image1](https://stackpocket.proslin.com/assets/c1.png)
 
-\!\[feature X\]\(https://stackpocket.proslin.com/assets/c3.png)
+![image2](https://stackpocket.proslin.com/assets/c3.png)
 
-\!\[feature X\]\(https://stackpocket.proslin.com/assets/c4-rec.mp4)
+![image3](https://stackpocket.proslin.com/assets/c4-rec.mp4)
 
-\!\[feature X\]\(https://stackpocket.proslin.com/assets/c5-rec.mp4)
+![image4](https://stackpocket.proslin.com/assets/c5-rec.mp4)
 
 
 
