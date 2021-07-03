@@ -89,11 +89,11 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	
 	if (email === "" && password === "" && username === "") {
-        vscode.window.showInformationMessage("If you havent sign up yet visit http://www/stackpocket.proslin.com to sign up ",
+        vscode.window.showInformationMessage("If you havent sign up yet visit http://www/stackpocket.me to sign up ",
             "SignUp"
           )
           .then((selection) => {
-             vscode.env.openExternal(vscode.Uri.parse('https://stackpocket.proslin.com'));
+             vscode.env.openExternal(vscode.Uri.parse('https://stackpocket.me'));
           });
 
 
