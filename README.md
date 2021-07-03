@@ -6,7 +6,7 @@
 
 ## Requirements
 
- - you will need to login or register at [login or signup](https://stackpocket.proslin.com)
+ - you will need to login or register at [login or signup](https://stackpocket.me)
 
 ## Features
 
@@ -14,13 +14,13 @@
 - Sending codes to your team mates on stackpocket
 - fetching stacks from your stack cloud to your vscode
 
-![image1](https://stackpocket.proslin.com/assets/c1.png)
+![image1](https://stackpocket.me/assets/c1.png)
 
-![image2](https://stackpocket.proslin.com/assets/c3.png)
+![image2](https://stackpocket.me/assets/c3.png)
 
-![image3](https://stackpocket.proslin.com/assets/c4-rec.mp4)
+![image3](https://stackpocket.me/assets/c4-rec.mp4)
 
-![image4](https://stackpocket.proslin.com/assets/c5-rec.mp4)
+![image4](https://stackpocket.me/assets/c5-rec.mp4)
 
 
 
